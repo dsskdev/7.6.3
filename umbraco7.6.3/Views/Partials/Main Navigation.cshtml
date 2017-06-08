@@ -8,7 +8,7 @@
 *@
 
 @{ var selection = CurrentPage.Site().Children.Where("Visible"); }
-
+@{Html.RenderPartial("Search Form");}
 <ul>
     @foreach (var item in selection)
     {
