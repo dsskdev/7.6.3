@@ -19,8 +19,8 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "189a3392e527f032")]
-[assembly:System.Reflection.AssemblyVersion("0.0.0.4")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "9d852b97afe10ac6")]
+[assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 namespace Umbraco.Web.PublishedContentModels
 {
@@ -585,7 +585,7 @@ namespace Umbraco.Web.PublishedContentModels
 
 	/// <summary>Partner</summary>
 	[PublishedContentModel("partner")]
-	public partial class Partner : PublishedContentModel, IDefaultContent, IUmbracoProperties
+	public partial class Partner : PublishedContentModel, IUmbracoProperties
 	{
 #pragma warning disable 0109 // new is redundant
 		public new const string ModelTypeAlias = "partner";
@@ -609,39 +609,21 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Page Image: Main image for page
+		/// Partner Image: Image of partner
 		///</summary>
-		[ImplementPropertyType("pageImage")]
-		public IPublishedContent PageImage
+		[ImplementPropertyType("partnerImage")]
+		public IPublishedContent PartnerImage
 		{
-			get { return Umbraco.Web.PublishedContentModels.DefaultContent.GetPageImage(this); }
+			get { return this.GetPropertyValue<IPublishedContent>("partnerImage"); }
 		}
 
 		///<summary>
-		/// Page Links: Add links to external and internal content on page
+		/// Partner Name: Name of partner
 		///</summary>
-		[ImplementPropertyType("pageLinks")]
-		public Umbraco.Web.Models.RelatedLinks PageLinks
+		[ImplementPropertyType("partnerName")]
+		public string PartnerName
 		{
-			get { return Umbraco.Web.PublishedContentModels.DefaultContent.GetPageLinks(this); }
-		}
-
-		///<summary>
-		/// Page RTE: Rich Text Editor for main content of page
-		///</summary>
-		[ImplementPropertyType("pageRTE")]
-		public IHtmlString PageRte
-		{
-			get { return Umbraco.Web.PublishedContentModels.DefaultContent.GetPageRte(this); }
-		}
-
-		///<summary>
-		/// Page Title: Title for page
-		///</summary>
-		[ImplementPropertyType("pageTitle")]
-		public string PageTitle
-		{
-			get { return Umbraco.Web.PublishedContentModels.DefaultContent.GetPageTitle(this); }
+			get { return this.GetPropertyValue<string>("partnerName"); }
 		}
 
 		///<summary>
@@ -701,7 +683,7 @@ namespace Umbraco.Web.PublishedContentModels
 
 	/// <summary>Department</summary>
 	[PublishedContentModel("department")]
-	public partial class Department : PublishedContentModel, IDefaultContent, IUmbracoProperties
+	public partial class Department : PublishedContentModel, IUmbracoProperties
 	{
 #pragma warning disable 0109 // new is redundant
 		public new const string ModelTypeAlias = "department";
@@ -725,39 +707,30 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Page Image: Main image for page
+		/// Department Image
 		///</summary>
-		[ImplementPropertyType("pageImage")]
-		public IPublishedContent PageImage
+		[ImplementPropertyType("departmentImage")]
+		public IPublishedContent DepartmentImage
 		{
-			get { return Umbraco.Web.PublishedContentModels.DefaultContent.GetPageImage(this); }
+			get { return this.GetPropertyValue<IPublishedContent>("departmentImage"); }
 		}
 
 		///<summary>
-		/// Page Links: Add links to external and internal content on page
+		/// Department Location: Location of department
 		///</summary>
-		[ImplementPropertyType("pageLinks")]
-		public Umbraco.Web.Models.RelatedLinks PageLinks
+		[ImplementPropertyType("departmentLocation")]
+		public string DepartmentLocation
 		{
-			get { return Umbraco.Web.PublishedContentModels.DefaultContent.GetPageLinks(this); }
+			get { return this.GetPropertyValue<string>("departmentLocation"); }
 		}
 
 		///<summary>
-		/// Page RTE: Rich Text Editor for main content of page
+		/// Department Name: Name of department
 		///</summary>
-		[ImplementPropertyType("pageRTE")]
-		public IHtmlString PageRte
+		[ImplementPropertyType("departmentName")]
+		public string DepartmentName
 		{
-			get { return Umbraco.Web.PublishedContentModels.DefaultContent.GetPageRte(this); }
-		}
-
-		///<summary>
-		/// Page Title: Title for page
-		///</summary>
-		[ImplementPropertyType("pageTitle")]
-		public string PageTitle
-		{
-			get { return Umbraco.Web.PublishedContentModels.DefaultContent.GetPageTitle(this); }
+			get { return this.GetPropertyValue<string>("departmentName"); }
 		}
 
 		///<summary>
@@ -817,7 +790,7 @@ namespace Umbraco.Web.PublishedContentModels
 
 	/// <summary>People</summary>
 	[PublishedContentModel("people")]
-	public partial class People : PublishedContentModel, IDefaultContent, IUmbracoProperties
+	public partial class People : PublishedContentModel, IUmbracoProperties
 	{
 #pragma warning disable 0109 // new is redundant
 		public new const string ModelTypeAlias = "people";
@@ -841,39 +814,30 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Page Image: Main image for page
+		/// People Image: Image of person
 		///</summary>
-		[ImplementPropertyType("pageImage")]
-		public IPublishedContent PageImage
+		[ImplementPropertyType("peopleImage")]
+		public IPublishedContent PeopleImage
 		{
-			get { return Umbraco.Web.PublishedContentModels.DefaultContent.GetPageImage(this); }
+			get { return this.GetPropertyValue<IPublishedContent>("peopleImage"); }
 		}
 
 		///<summary>
-		/// Page Links: Add links to external and internal content on page
+		/// People Name: Name of person
 		///</summary>
-		[ImplementPropertyType("pageLinks")]
-		public Umbraco.Web.Models.RelatedLinks PageLinks
+		[ImplementPropertyType("peopleName")]
+		public string PeopleName
 		{
-			get { return Umbraco.Web.PublishedContentModels.DefaultContent.GetPageLinks(this); }
+			get { return this.GetPropertyValue<string>("peopleName"); }
 		}
 
 		///<summary>
-		/// Page RTE: Rich Text Editor for main content of page
+		/// People Role: Role of person
 		///</summary>
-		[ImplementPropertyType("pageRTE")]
-		public IHtmlString PageRte
+		[ImplementPropertyType("peopleRole")]
+		public string PeopleRole
 		{
-			get { return Umbraco.Web.PublishedContentModels.DefaultContent.GetPageRte(this); }
-		}
-
-		///<summary>
-		/// Page Title: Title for page
-		///</summary>
-		[ImplementPropertyType("pageTitle")]
-		public string PageTitle
-		{
-			get { return Umbraco.Web.PublishedContentModels.DefaultContent.GetPageTitle(this); }
+			get { return this.GetPropertyValue<string>("peopleRole"); }
 		}
 
 		///<summary>
@@ -933,7 +897,7 @@ namespace Umbraco.Web.PublishedContentModels
 
 	/// <summary>News</summary>
 	[PublishedContentModel("news")]
-	public partial class News : PublishedContentModel, IDefaultContent, IUmbracoProperties
+	public partial class News : PublishedContentModel, IUmbracoProperties
 	{
 #pragma warning disable 0109 // new is redundant
 		public new const string ModelTypeAlias = "news";
@@ -954,42 +918,6 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<News, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
-		}
-
-		///<summary>
-		/// Page Image: Main image for page
-		///</summary>
-		[ImplementPropertyType("pageImage")]
-		public IPublishedContent PageImage
-		{
-			get { return Umbraco.Web.PublishedContentModels.DefaultContent.GetPageImage(this); }
-		}
-
-		///<summary>
-		/// Page Links: Add links to external and internal content on page
-		///</summary>
-		[ImplementPropertyType("pageLinks")]
-		public Umbraco.Web.Models.RelatedLinks PageLinks
-		{
-			get { return Umbraco.Web.PublishedContentModels.DefaultContent.GetPageLinks(this); }
-		}
-
-		///<summary>
-		/// Page RTE: Rich Text Editor for main content of page
-		///</summary>
-		[ImplementPropertyType("pageRTE")]
-		public IHtmlString PageRte
-		{
-			get { return Umbraco.Web.PublishedContentModels.DefaultContent.GetPageRte(this); }
-		}
-
-		///<summary>
-		/// Page Title: Title for page
-		///</summary>
-		[ImplementPropertyType("pageTitle")]
-		public string PageTitle
-		{
-			get { return Umbraco.Web.PublishedContentModels.DefaultContent.GetPageTitle(this); }
 		}
 
 		///<summary>
@@ -1049,7 +977,7 @@ namespace Umbraco.Web.PublishedContentModels
 
 	/// <summary>Event</summary>
 	[PublishedContentModel("event")]
-	public partial class Event : PublishedContentModel, IDefaultContent, IUmbracoProperties
+	public partial class Event : PublishedContentModel, IUmbracoProperties
 	{
 #pragma warning disable 0109 // new is redundant
 		public new const string ModelTypeAlias = "event";
@@ -1073,39 +1001,30 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Page Image: Main image for page
+		/// Event Image: Image of event
 		///</summary>
-		[ImplementPropertyType("pageImage")]
-		public IPublishedContent PageImage
+		[ImplementPropertyType("eventImage")]
+		public IPublishedContent EventImage
 		{
-			get { return Umbraco.Web.PublishedContentModels.DefaultContent.GetPageImage(this); }
+			get { return this.GetPropertyValue<IPublishedContent>("eventImage"); }
 		}
 
 		///<summary>
-		/// Page Links: Add links to external and internal content on page
+		/// Event Location: Location of event
 		///</summary>
-		[ImplementPropertyType("pageLinks")]
-		public Umbraco.Web.Models.RelatedLinks PageLinks
+		[ImplementPropertyType("eventLocation")]
+		public string EventLocation
 		{
-			get { return Umbraco.Web.PublishedContentModels.DefaultContent.GetPageLinks(this); }
+			get { return this.GetPropertyValue<string>("eventLocation"); }
 		}
 
 		///<summary>
-		/// Page RTE: Rich Text Editor for main content of page
+		/// Event Name: Name of Event
 		///</summary>
-		[ImplementPropertyType("pageRTE")]
-		public IHtmlString PageRte
+		[ImplementPropertyType("eventName")]
+		public string EventName
 		{
-			get { return Umbraco.Web.PublishedContentModels.DefaultContent.GetPageRte(this); }
-		}
-
-		///<summary>
-		/// Page Title: Title for page
-		///</summary>
-		[ImplementPropertyType("pageTitle")]
-		public string PageTitle
-		{
-			get { return Umbraco.Web.PublishedContentModels.DefaultContent.GetPageTitle(this); }
+			get { return this.GetPropertyValue<string>("eventName"); }
 		}
 
 		///<summary>

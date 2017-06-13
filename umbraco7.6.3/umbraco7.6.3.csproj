@@ -3438,6 +3438,15 @@
     <Content Include="uSync\data\MediaType\folder\def.config" />
     <Content Include="uSync\data\MediaType\image\def.config" />
     <Content Include="uSync\data\Template\master\Master.config" />
+    <Content Include="Views\Partials\Main Navigation.cshtml" />
+    <Content Include="Views\Partials\Search Form.cshtml" />
+    <Content Include="Views\Partials\Sitemap.cshtml" />
+    <Content Include="Views\Branch.cshtml" />
+    <Content Include="Views\Home.cshtml" />
+    <Content Include="Views\Master.cshtml" />
+    <Content Include="Views\Page.cshtml" />
+    <Content Include="Views\Search.cshtml" />
+    <Content Include="Views\Sitemap.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

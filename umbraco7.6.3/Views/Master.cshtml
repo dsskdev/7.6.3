@@ -22,8 +22,13 @@
     <![endif]-->
   </head>
   <body>
-    @{Html.RenderPartial("Main Navigation");}
-    @RenderBody()
+    <div class="container">
+        <header>
+            @{Html.RenderPartial("Main Navigation");}
+        </header>
+        @RenderBody()
+        <footer></footer>
+    </div>
     <script src="~/scripts/jquery-1.9.1.min.js"></script>
     <script src="~/scripts/bootstrap.min.js"></script>
   </body>
