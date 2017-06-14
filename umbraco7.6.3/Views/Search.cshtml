@@ -14,7 +14,7 @@
  }
  var searcher = ExamineManager.Instance;
  var searchCriteria = searcher.CreateSearchCriteria();
- var query = searchCriteria.GroupedOr(new[] { "nodeName", "name", "pageTitle", "pageDescription", "pageContent" }, searchTerm).Compile();
+ var query = searchCriteria.GroupedOr(new[] { "nodeName", "name", "pageTitle", "pageDescription", "pageContent" }, searchTerm.MultipleCharacterWildcard()).Compile();
  var searchResults = searcher.Search(query).Where(r => r["__IndexType"] == "content").ToList();    
 }
 @if (searchResults.Any())
