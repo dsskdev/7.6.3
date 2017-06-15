@@ -4,5 +4,13 @@
 }
 
 @* the fun starts here *@
-@Umbraco.Field("pageName")
-@Umbraco.Field("pageRTE")
+@{Html.RenderPartial("Breadcrumb");}
+<div class="row">
+    <div class="col-md-2 bg-success">
+        @{Html.RenderPartial("Navigation Siblings");}
+    </div>
+    <div class="col-md-10 bg-info">
+        @Umbraco.Field("pageName")
+        @Umbraco.Field("pageRTE")
+    </div>
+</div>
