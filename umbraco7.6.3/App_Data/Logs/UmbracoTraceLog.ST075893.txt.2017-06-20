@@ -1,0 +1,158 @@
+﻿ 2017-06-20 11:09:33,315 [P484/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.6.3 application starting on ST075893
+ 2017-06-20 11:09:33,335 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-06-20 11:09:33,351 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 14ms)
+ 2017-06-20 11:09:33,413 [P484/D2/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-06-20 11:09:33,414 [P484/D2/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-06-20 11:09:33,415 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-20 11:09:33,920 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 505ms)
+ 2017-06-20 11:09:33,921 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IApplicationStartupHandler
+ 2017-06-20 11:09:33,926 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IApplicationStartupHandler (took 4ms)
+ 2017-06-20 11:09:33,936 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-20 11:09:33,937 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2017-06-20 11:09:33,937 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-06-20 11:09:33,940 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter (took 2ms)
+ 2017-06-20 11:09:33,940 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-20 11:09:33,940 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2017-06-20 11:09:33,941 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-06-20 11:09:33,947 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IPropertyValueConverter (took 6ms)
+ 2017-06-20 11:09:33,957 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-20 11:09:33,958 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2017-06-20 11:09:33,958 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.Mvc.SurfaceController
+ 2017-06-20 11:09:33,961 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.Mvc.SurfaceController (took 3ms)
+ 2017-06-20 11:09:33,961 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-20 11:09:33,961 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2017-06-20 11:09:33,962 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.WebApi.UmbracoApiController
+ 2017-06-20 11:09:33,964 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.WebApi.UmbracoApiController (took 2ms)
+ 2017-06-20 11:09:35,908 [P484/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2017-06-20 11:09:36,391 [P484/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2017-06-20 11:09:36,422 [P484/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2017-06-20 11:09:37,032 [P484/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2017-06-20 11:09:37,037 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncApplicationEventHandler - Initializing uSync 73
+ 2017-06-20 11:09:37,040 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncApplicationEventHandler - Firing up uSync
+ 2017-06-20 11:09:37,311 [P484/D2/T1] INFO  Jumoo.uSync.Core.uSyncCoreContext - Loading Context (102ms)
+ 2017-06-20 11:09:37,359 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncBackOfficeContext - Loading up Sync Handlers : 16
+ 2017-06-20 11:09:37,410 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncApplicationEventHandler - Running uSync Import: Group = default Folder = ~/uSync/data/ Force = False
+ 2017-06-20 11:09:37,441 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Running Import: DataType
+ 2017-06-20 11:09:39,874 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Handler Import Complete: 46 Items 0 changes 0 failures
+ 2017-06-20 11:09:39,874 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Running Import: Template
+ 2017-06-20 11:09:39,874 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Processing a Delete: Umbraco.Core.Models.ITemplate
+ 2017-06-20 11:09:39,977 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Processing a Delete: Umbraco.Core.Models.ITemplate
+ 2017-06-20 11:09:39,987 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-20 11:09:39,988 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2017-06-20 11:09:39,988 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Core.Persistence.Mappers.MapperForAttribute]Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2017-06-20 11:09:40,010 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Core.Persistence.Mappers.MapperForAttribute]Umbraco.Core.Persistence.Mappers.BaseMapper (took 22ms)
+ 2017-06-20 11:09:40,124 [P484/D2/T1] WARN  Jumoo.uSync.Core.Serializers.TemplateSerializer - Cannot find underling template file, so we cannot create the template
+ 2017-06-20 11:09:40,124 [P484/D2/T1] WARN  Jumoo.uSync.Core.Serializers.TemplateSerializer - Can't get a template path?
+ 2017-06-20 11:09:40,213 [P484/D2/T1] WARN  Jumoo.uSync.Core.Serializers.TemplateSerializer - Cannot find underling template file, so we cannot create the template
+ 2017-06-20 11:09:40,213 [P484/D2/T1] WARN  Jumoo.uSync.Core.Serializers.TemplateSerializer - Can't get a template path?
+ 2017-06-20 11:09:40,234 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Handler Import Complete: 15 Items 4 changes 0 failures
+ 2017-06-20 11:09:40,235 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Running Import: DocumentType
+ 2017-06-20 11:09:41,472 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-20 11:09:41,473 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2017-06-20 11:09:41,473 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.ICacheRefresher
+ 2017-06-20 11:09:41,475 [P484/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.ICacheRefresher (took 2ms)
+ 2017-06-20 11:09:42,205 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Handler Import Complete: 11 Items 1 changes 0 failures
+ 2017-06-20 11:09:42,205 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Running Import: MediaType
+ 2017-06-20 11:09:42,383 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Handler Import Complete: 3 Items 0 changes 0 failures
+ 2017-06-20 11:09:42,383 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Running Import: Languages
+ 2017-06-20 11:09:42,432 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Handler Import Complete: 1 Items 0 changes 0 failures
+ 2017-06-20 11:09:42,432 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Running Import: DictionaryItem
+ 2017-06-20 11:09:42,433 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Handler Import Complete: 0 Items 0 changes 0 failures
+ 2017-06-20 11:09:42,433 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Running Import: macro
+ 2017-06-20 11:09:42,434 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Handler Import Complete: 0 Items 0 changes 0 failures
+ 2017-06-20 11:09:42,650 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncApplicationEventHandler - Setting up Events default
+ 2017-06-20 11:09:42,725 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncAction - ### uSync.BackOffice Processed 76 items with 5 changes ###
+ 2017-06-20 11:09:42,726 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncAction - Action: Delete DefaultContent Umbraco.Core.Models.ITemplate Not found 
+ 2017-06-20 11:09:42,727 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncAction - Action: Delete PageNotFound Umbraco.Core.Models.ITemplate Not found 
+ 2017-06-20 11:09:42,727 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncAction - Action: Import Default Content Umbraco.Core.Models.ITemplate Can't get template path (are template files missing?) C:\Dibs\umbraco7.6.3\umbraco7.6.3\uSync\data\Template\defaultcontent\DefaultContent.config
+ 2017-06-20 11:09:42,727 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncAction - Action: Import 404 Umbraco.Core.Models.ITemplate Can't get template path (are template files missing?) C:\Dibs\umbraco7.6.3\umbraco7.6.3\uSync\data\Template\master\pagenotfound\pageNotFound.config
+ 2017-06-20 11:09:42,728 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncAction - Action: Import Default Content Umbraco.Core.Models.IContentType  C:\Dibs\umbraco7.6.3\umbraco7.6.3\uSync\data\DocumentType\compositions\default-content\def.config
+ 2017-06-20 11:09:42,740 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncActionLogger - Saving uSync Report: C:\Dibs\umbraco7.6.3\umbraco7.6.3\App_Data\temp\uSync\20170620_110942_Startup.config
+ 2017-06-20 11:09:42,763 [P484/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncApplicationEventHandler - uSync Complete (5722ms)
+ 2017-06-20 11:09:42,909 [P484/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 9709ms)
+ 2017-06-20 11:09:43,304 [P484/D2/T6] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:51094/umbraco (UmbracoModule request)
+ 2017-06-20 11:09:43,575 [P484/D2/T6] INFO  umbraco.content - Load Xml from file...
+ 2017-06-20 11:09:43,610 [P484/D2/T6] INFO  umbraco.content - Loaded Xml from file.
+ 2017-06-20 11:09:43,925 [P484/D2/T6] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-20 11:09:43,926 [P484/D2/T6] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2017-06-20 11:09:43,926 [P484/D2/T6] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IParameterEditor
+ 2017-06-20 11:09:43,937 [P484/D2/T6] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IParameterEditor (took 10ms)
+ 2017-06-20 11:10:43,808 [P484/D2/T7] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-06-19 11:10:43
+ 2017-06-20 11:12:05,667 [P484/D2/T7] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-20 11:12:05,667 [P484/D2/T7] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2017-06-20 11:12:05,667 [P484/D2/T7] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.Deploy.IServiceConnector
+ 2017-06-20 11:12:05,675 [P484/D2/T7] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.Deploy.IServiceConnector (took 7ms)
+ 2017-06-20 11:14:55,324 [P484/D2/T19] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-20 11:14:55,324 [P484/D2/T19] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2017-06-20 11:14:55,324 [P484/D2/T19] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IAction
+ 2017-06-20 11:14:55,332 [P484/D2/T19] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IAction (took 8ms)
+ 2017-06-20 11:15:02,906 [P484/D2/T28] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username dibs_singh@hotmail.com from IP address ::1
+ 2017-06-20 11:15:02,906 [P484/D2/T28] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: dibs_singh@hotmail.com logged in from IP address ::1
+ 2017-06-20 11:15:03,354 [P484/D2/T27] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-20 11:15:03,354 [P484/D2/T27] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2017-06-20 11:15:03,354 [P484/D2/T27] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController
+ 2017-06-20 11:15:03,354 [P484/D2/T27] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController (took 3ms)
+ 2017-06-20 11:15:03,440 [P484/D2/T31] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-20 11:15:03,440 [P484/D2/T31] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2017-06-20 11:15:03,441 [P484/D2/T31] INFO  Umbraco.Core.PluginManager - Resolving [umbraco.businesslogic.ApplicationAttribute]umbraco.interfaces.IApplication
+ 2017-06-20 11:15:03,444 [P484/D2/T31] INFO  Umbraco.Core.PluginManager - Resolved [umbraco.businesslogic.ApplicationAttribute]umbraco.interfaces.IApplication (took 3ms)
+ 2017-06-20 11:15:03,536 [P484/D2/T19] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-20 11:15:03,536 [P484/D2/T19] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2017-06-20 11:15:03,537 [P484/D2/T19] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.ITree
+ 2017-06-20 11:15:03,583 [P484/D2/T19] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.ITree (took 46ms)
+ 2017-06-20 11:15:03,596 [P484/D2/T31] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-20 11:15:03,596 [P484/D2/T31] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2017-06-20 11:15:03,596 [P484/D2/T31] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController
+ 2017-06-20 11:15:03,596 [P484/D2/T31] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController (took 0ms)
+ 2017-06-20 11:15:03,598 [P484/D2/T31] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-20 11:15:03,598 [P484/D2/T31] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2017-06-20 11:15:03,599 [P484/D2/T31] INFO  Umbraco.Core.PluginManager - Resolving [umbraco.businesslogic.TreeAttribute]umbraco.interfaces.ITree
+ 2017-06-20 11:15:03,603 [P484/D2/T31] INFO  Umbraco.Core.PluginManager - Resolved [umbraco.businesslogic.TreeAttribute]umbraco.interfaces.ITree (took 3ms)
+ 2017-06-20 11:34:33,265 [P484/D2/T13] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: dibs_singh@hotmail.com, IP Address: ::1
+ 2017-06-20 11:38:08,151 [P484/D2/T29] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username dibs_singh@hotmail.com from IP address ::1
+ 2017-06-20 11:38:08,151 [P484/D2/T29] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: dibs_singh@hotmail.com logged in from IP address ::1
+ 2017-06-20 11:38:12,241 [P484/D2/T71] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-20 11:38:12,242 [P484/D2/T71] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2017-06-20 11:38:12,242 [P484/D2/T71] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.HealthCheck.HealthCheck
+ 2017-06-20 11:38:12,250 [P484/D2/T71] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.HealthCheck.HealthCheck (took 7ms)
+ 2017-06-20 11:38:13,414 [P484/D2/T29] ERROR dashboardUtilities.FeedProxy - Exception occurred
+System.Net.WebException: The remote server returned an error: (407) Proxy Authentication Required.
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at dashboardUtilities.FeedProxy.Page_Load(Object sender, EventArgs e)
+ 2017-06-20 11:57:41,238 [P484/D2/T112] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: dibs_singh@hotmail.com, IP Address: ::1
+ 2017-06-20 12:11:33,790 [P484/D2/T117] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username dibs_singh@hotmail.com from IP address ::1
+ 2017-06-20 12:11:33,790 [P484/D2/T117] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: dibs_singh@hotmail.com logged in from IP address ::1
+ 2017-06-20 12:31:06,210 [P484/D2/T118] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: dibs_singh@hotmail.com, IP Address: ::1
+ 2017-06-20 14:02:56,096 [P484/D2/T124] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username dibs_singh@hotmail.com from IP address ::1
+ 2017-06-20 14:02:56,102 [P484/D2/T124] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: dibs_singh@hotmail.com logged in from IP address ::1
+ 2017-06-20 14:02:56,508 [P484/D2/T124] ERROR Umbraco.Web.WebApi.Filters.AngularAntiForgeryHelper - Could not validate XSRF token
+System.Web.Mvc.HttpAntiForgeryException (0x80004005): The provided anti-forgery token was meant for user "5040647", but the current user is "dibs_singh@hotmail.com".
+   at System.Web.Helpers.AntiXsrf.TokenValidator.ValidateTokens(HttpContextBase httpContext, IIdentity identity, AntiForgeryToken sessionToken, AntiForgeryToken fieldToken)
+   at System.Web.Helpers.AntiXsrf.AntiForgeryWorker.Validate(HttpContextBase httpContext, String cookieToken, String formToken)
+   at System.Web.Helpers.AntiForgery.Validate(String cookieToken, String formToken)
+   at Umbraco.Web.WebApi.Filters.AngularAntiForgeryHelper.ValidateTokens(String cookieToken, String headerToken)
+ 2017-06-20 14:22:30,160 [P484/D2/T129] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: dibs_singh@hotmail.com, IP Address: ::1
+ 2017-06-20 15:10:43,826 [P484/D2/T69] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-06-19 15:10:43
+ 2017-06-20 15:34:58,993 [P484/D2/T112] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username dibs_singh@hotmail.com from IP address ::1
+ 2017-06-20 15:34:58,993 [P484/D2/T112] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: dibs_singh@hotmail.com logged in from IP address ::1
+ 2017-06-20 15:34:59,438 [P484/D2/T112] ERROR Umbraco.Web.WebApi.Filters.AngularAntiForgeryHelper - Could not validate XSRF token
+System.Web.Mvc.HttpAntiForgeryException (0x80004005): The provided anti-forgery token was meant for user "5040647", but the current user is "dibs_singh@hotmail.com".
+   at System.Web.Helpers.AntiXsrf.TokenValidator.ValidateTokens(HttpContextBase httpContext, IIdentity identity, AntiForgeryToken sessionToken, AntiForgeryToken fieldToken)
+   at System.Web.Helpers.AntiXsrf.AntiForgeryWorker.Validate(HttpContextBase httpContext, String cookieToken, String formToken)
+   at System.Web.Helpers.AntiForgery.Validate(String cookieToken, String formToken)
+   at Umbraco.Web.WebApi.Filters.AngularAntiForgeryHelper.ValidateTokens(String cookieToken, String headerToken)
+ 2017-06-20 15:35:00,311 [P484/D2/T112] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-20 15:35:00,326 [P484/D2/T112] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 26ms)
+ 2017-06-20 15:35:00,373 [P484/D2/T112] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController
+ 2017-06-20 15:35:00,373 [P484/D2/T112] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController (took 0ms)
+ 2017-06-20 15:55:26,809 [P484/D2/T129] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-20 15:55:26,810 [P484/D2/T129] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2017-06-20 15:55:26,810 [P484/D2/T129] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController
+ 2017-06-20 15:55:26,810 [P484/D2/T129] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController (took 0ms)
+ 2017-06-20 16:06:15,125 [P484/D2/T129] ERROR dashboardUtilities.FeedProxy - Exception occurred
+System.Net.WebException: The remote server returned an error: (407) Proxy Authentication Required.
+   at System.Net.WebClient.DownloadDataInternal(Uri address, WebRequest& request)
+   at System.Net.WebClient.DownloadString(Uri address)
+   at dashboardUtilities.FeedProxy.Page_Load(Object sender, EventArgs e)
+ 2017-06-20 16:25:48,104 [P484/D2/T41] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: dibs_singh@hotmail.com, IP Address: ::1

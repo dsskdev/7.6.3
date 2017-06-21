@@ -6,10 +6,21 @@
 @* the fun starts here *@
 @{Html.RenderPartial("Breadcrumb");}
 <div class="row">
-    <div class="col-md-2 bg-success">
-        @{Html.RenderPartial("Navigation Siblings");}
+    <!-- Sidebar Column -->
+    <div class="col-md-3">
+        <div class="list-group">
+           @{Html.RenderPartial("Navigation Siblings");}
+        </div>
     </div>
-    <div class="col-md-10 bg-info">
+    <!-- Content Column -->
+    <div class="col-md-9">
+        @{
+            var image = Model.Content.GetPropertyValue<IPublishedContent>("pageImage");
+            if (image != null)
+            {
+                <img class="img-responsive" src="@image.GetPropertyValue("umbracoFile")" />
+            }
+        }
         @Umbraco.Field("pageName")
         @Umbraco.Field("pageRTE")
     </div>

@@ -1,6 +1,6 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-	Layout = null;
+    Layout = null;
 }
 
 @* the fun starts here *@
@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@Model.Content.Name</title>
     <link href="~/css/bootstrap.min.css" rel="stylesheet">
-
+    <link href="~/css/style.css" rel="stylesheet" />
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -25,6 +25,7 @@
     <div class="container">
         <header>
             @{Html.RenderPartial("Navigation Main");}
+            @{ Html.RenderPartial("Search Form");}
         </header>
         @RenderBody()
         <footer></footer>

@@ -9,7 +9,7 @@
 
 @{ var selection = CurrentPage.Site().Children.Where("Visible"); }
 <nav class="navbar navbar-default">
-    <div class="container">
+    <div class="container-fluid">
         <ul class="nav navbar-nav navbar-right">
             @foreach (var item in selection)
             {
@@ -17,7 +17,6 @@
                     <a href="@item.Url">@item.GetPropertyValue("pageTitle")</a>
                 </li>
             }
-            <li>@{Html.RenderPartial("Search Form");}</li>
         </ul>
     </div>
 </nav>

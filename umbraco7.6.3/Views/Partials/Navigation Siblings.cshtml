@@ -1,13 +1,13 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{Html.RenderPartial("Navigation Parent"); }
 @{
     var siblings = Model.Content.Siblings();
-	<ul>
-    @{Html.RenderPartial("Navigation Parent"); }
+  	<ul>
         <hr />
 	@foreach (var item in siblings.Where(x => x.Id != Model.Content.Id))
 	{
 		<li>
-			<a title="@item.Name" href="@item.Url">@item.Name</a>
+			<a title="@item.Name" href="@item.Url">@item.GetPropertyValue("pageTitle")</a>
 		</li>
 	}
 	</ul>
