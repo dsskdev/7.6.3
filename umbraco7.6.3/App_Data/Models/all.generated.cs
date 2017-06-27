@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "9d852b97afe10ac6")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "d7c9a060e9199b43")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -830,6 +830,15 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
+		/// People Bio
+		///</summary>
+		[ImplementPropertyType("peopleBio")]
+		public IHtmlString PeopleBio
+		{
+			get { return this.GetPropertyValue<IHtmlString>("peopleBio"); }
+		}
+
+		///<summary>
 		/// People Image: Image of person
 		///</summary>
 		[ImplementPropertyType("peopleImage")]
@@ -937,6 +946,33 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
+		/// News Image
+		///</summary>
+		[ImplementPropertyType("newsImage")]
+		public IPublishedContent NewsImage
+		{
+			get { return this.GetPropertyValue<IPublishedContent>("newsImage"); }
+		}
+
+		///<summary>
+		/// News RTE
+		///</summary>
+		[ImplementPropertyType("newsRTE")]
+		public IHtmlString NewsRte
+		{
+			get { return this.GetPropertyValue<IHtmlString>("newsRTE"); }
+		}
+
+		///<summary>
+		/// News Title
+		///</summary>
+		[ImplementPropertyType("newsTitle")]
+		public string NewsTitle
+		{
+			get { return this.GetPropertyValue<string>("newsTitle"); }
+		}
+
+		///<summary>
 		/// Umbraco Internal Redirect Id
 		///</summary>
 		[ImplementPropertyType("umbracoInternalRedirectId")]
@@ -1014,6 +1050,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Event, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Event Description
+		///</summary>
+		[ImplementPropertyType("eventDescription")]
+		public IHtmlString EventDescription
+		{
+			get { return this.GetPropertyValue<IHtmlString>("eventDescription"); }
 		}
 
 		///<summary>

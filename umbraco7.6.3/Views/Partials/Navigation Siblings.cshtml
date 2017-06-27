@@ -7,7 +7,7 @@
 	@foreach (var item in siblings.Where(x => x.Id != Model.Content.Id))
 	{
 		<li>
-			<a title="@item.Name" href="@item.Url">@item.GetPropertyValue("pageTitle")</a>
+			<a title="@item.Name" href="@item.Url">@item.Name</a>
 		</li>
 	}
 	</ul>

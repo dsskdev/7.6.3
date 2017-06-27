@@ -1,7 +1,33 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-	Layout = "Master.cshtml";
+    Layout = "Master.cshtml";
 }
-
-@* the fun starts here *@
-
+<div class="row">
+    <div class="col-md-3">
+        @{Html.RenderPartial("Navigation Siblings");}
+    </div>
+    <div class="col-md-9">
+        <div class="row">
+            <div class="col-md-6">
+                @{
+                    var image = Model.Content.GetPropertyValue<IPublishedContent>("eventImage");
+                    if (image != null)
+                    {
+                        <img class="img-responsive" src="@image.GetPropertyValue("umbracoFile")" />
+                    }
+                    else
+                    {
+                        <img class="img-responsive" src="~/media/1003/750x450.png" />
+                    }
+                }
+            </div>
+            <div class="col-md-6">
+                <h2>@Umbraco.Field("eventName")</h2>
+                <h3>@Umbraco.Field("eventLocation")</h3>
+            </div>
+            <div class="col-md-12">
+                @Umbraco.Field("eventDescription")
+            </div>
+        </div>
+    </div>
+</div>
