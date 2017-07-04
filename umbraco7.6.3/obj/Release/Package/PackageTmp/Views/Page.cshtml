@@ -1,0 +1,27 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = "Master.cshtml";
+}
+
+@* the fun starts here *@
+@{Html.RenderPartial("Breadcrumb");}
+<div class="row">
+    <!-- Sidebar Column -->
+    <div class="col-md-3">
+        <div class="list-group">
+           @{Html.RenderPartial("Navigation Siblings");}
+        </div>
+    </div>
+    <!-- Content Column -->
+    <div class="col-md-9">
+        @{
+            var image = Model.Content.GetPropertyValue<IPublishedContent>("pageImage");
+            if (image != null)
+            {
+                <img class="img-responsive" src="@image.GetPropertyValue("umbracoFile")" />
+            }
+        }
+        @Umbraco.Field("pageName")
+        @Umbraco.Field("pageRTE")
+    </div>
+</div>

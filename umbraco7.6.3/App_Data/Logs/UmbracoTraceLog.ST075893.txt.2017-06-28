@@ -1,0 +1,81 @@
+﻿ 2017-06-28 09:18:21,385 [P1352/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.6.3 application starting on ST075893
+ 2017-06-28 09:18:21,391 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2017-06-28 09:18:21,398 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 7ms)
+ 2017-06-28 09:18:21,415 [P1352/D2/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2017-06-28 09:18:21,415 [P1352/D2/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2017-06-28 09:18:21,417 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-28 09:18:22,535 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 1118ms)
+ 2017-06-28 09:18:22,536 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IApplicationStartupHandler
+ 2017-06-28 09:18:22,537 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IApplicationStartupHandler (took 1ms)
+ 2017-06-28 09:18:22,872 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-28 09:18:22,873 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2017-06-28 09:18:22,873 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2017-06-28 09:18:22,874 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter (took 0ms)
+ 2017-06-28 09:18:22,875 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-28 09:18:22,875 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2017-06-28 09:18:22,875 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2017-06-28 09:18:22,877 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IPropertyValueConverter (took 2ms)
+ 2017-06-28 09:18:22,887 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-28 09:18:22,887 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2017-06-28 09:18:22,888 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.Mvc.SurfaceController
+ 2017-06-28 09:18:22,888 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.Mvc.SurfaceController (took 0ms)
+ 2017-06-28 09:18:22,889 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-28 09:18:22,889 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2017-06-28 09:18:22,889 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.WebApi.UmbracoApiController
+ 2017-06-28 09:18:22,890 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.WebApi.UmbracoApiController (took 0ms)
+ 2017-06-28 09:18:24,877 [P1352/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2017-06-28 09:18:25,024 [P1352/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2017-06-28 09:18:25,329 [P1352/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2017-06-28 09:18:25,529 [P1352/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2017-06-28 09:18:25,529 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncApplicationEventHandler - Initializing uSync 73
+ 2017-06-28 09:18:25,596 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncApplicationEventHandler - Firing up uSync
+ 2017-06-28 09:18:28,320 [P1352/D2/T1] INFO  Jumoo.uSync.Core.uSyncCoreContext - Loading Context (2623ms)
+ 2017-06-28 09:18:28,339 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncBackOfficeContext - Loading up Sync Handlers : 16
+ 2017-06-28 09:18:28,350 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncApplicationEventHandler - Running uSync Import: Group = default Folder = ~/uSync/data/ Force = False
+ 2017-06-28 09:18:28,352 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Running Import: DataType
+ 2017-06-28 09:18:30,740 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Handler Import Complete: 51 Items 0 changes 0 failures
+ 2017-06-28 09:18:30,741 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Running Import: Template
+ 2017-06-28 09:18:30,741 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Processing a Delete: Umbraco.Core.Models.ITemplate
+ 2017-06-28 09:18:30,798 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Processing a Delete: Umbraco.Core.Models.ITemplate
+ 2017-06-28 09:18:30,800 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-28 09:18:30,800 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2017-06-28 09:18:30,801 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Core.Persistence.Mappers.MapperForAttribute]Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2017-06-28 09:18:30,801 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Core.Persistence.Mappers.MapperForAttribute]Umbraco.Core.Persistence.Mappers.BaseMapper (took 0ms)
+ 2017-06-28 09:18:30,854 [P1352/D2/T1] WARN  Jumoo.uSync.Core.Serializers.TemplateSerializer - Cannot find underling template file, so we cannot create the template
+ 2017-06-28 09:18:30,854 [P1352/D2/T1] WARN  Jumoo.uSync.Core.Serializers.TemplateSerializer - Can't get a template path?
+ 2017-06-28 09:18:30,905 [P1352/D2/T1] WARN  Jumoo.uSync.Core.Serializers.TemplateSerializer - Cannot find underling template file, so we cannot create the template
+ 2017-06-28 09:18:30,905 [P1352/D2/T1] WARN  Jumoo.uSync.Core.Serializers.TemplateSerializer - Can't get a template path?
+ 2017-06-28 09:18:30,908 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Handler Import Complete: 17 Items 4 changes 0 failures
+ 2017-06-28 09:18:30,908 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Running Import: DocumentType
+ 2017-06-28 09:18:31,904 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-28 09:18:31,904 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2017-06-28 09:18:31,904 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.ICacheRefresher
+ 2017-06-28 09:18:31,904 [P1352/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.ICacheRefresher (took 0ms)
+ 2017-06-28 09:18:32,413 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Handler Import Complete: 11 Items 1 changes 0 failures
+ 2017-06-28 09:18:32,413 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Running Import: MediaType
+ 2017-06-28 09:18:32,545 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Handler Import Complete: 3 Items 0 changes 0 failures
+ 2017-06-28 09:18:32,546 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Running Import: Languages
+ 2017-06-28 09:18:32,592 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Handler Import Complete: 1 Items 0 changes 0 failures
+ 2017-06-28 09:18:32,592 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Running Import: DictionaryItem
+ 2017-06-28 09:18:32,593 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Handler Import Complete: 0 Items 0 changes 0 failures
+ 2017-06-28 09:18:32,593 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Running Import: macro
+ 2017-06-28 09:18:32,593 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.Logging - Handler Import Complete: 0 Items 0 changes 0 failures
+ 2017-06-28 09:18:32,916 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncApplicationEventHandler - Setting up Events default
+ 2017-06-28 09:18:32,917 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncAction - ### uSync.BackOffice Processed 83 items with 5 changes ###
+ 2017-06-28 09:18:32,917 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncAction - Action: Delete DefaultContent Umbraco.Core.Models.ITemplate Not found 
+ 2017-06-28 09:18:32,917 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncAction - Action: Delete PageNotFound Umbraco.Core.Models.ITemplate Not found 
+ 2017-06-28 09:18:32,917 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncAction - Action: Import Default Content Umbraco.Core.Models.ITemplate Can't get template path (are template files missing?) C:\Dibs\umbraco7.6.3\umbraco7.6.3\uSync\data\Template\defaultcontent\DefaultContent.config
+ 2017-06-28 09:18:32,917 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncAction - Action: Import 404 Umbraco.Core.Models.ITemplate Can't get template path (are template files missing?) C:\Dibs\umbraco7.6.3\umbraco7.6.3\uSync\data\Template\master\pagenotfound\pageNotFound.config
+ 2017-06-28 09:18:32,917 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncAction - Action: Import Default Content Umbraco.Core.Models.IContentType  C:\Dibs\umbraco7.6.3\umbraco7.6.3\uSync\data\DocumentType\compositions\default-content\def.config
+ 2017-06-28 09:18:32,918 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncActionLogger - Saving uSync Report: C:\Dibs\umbraco7.6.3\umbraco7.6.3\App_Data\temp\uSync\20170628_091832_Startup.config
+ 2017-06-28 09:18:32,927 [P1352/D2/T1] INFO  Jumoo.uSync.BackOffice.uSyncApplicationEventHandler - uSync Complete (7330ms)
+ 2017-06-28 09:18:33,020 [P1352/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 11717ms)
+ 2017-06-28 09:18:33,288 [P1352/D2/T8] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:51094/umbraco (UmbracoModule request)
+ 2017-06-28 09:18:33,582 [P1352/D2/T8] INFO  umbraco.content - Load Xml from file...
+ 2017-06-28 09:18:33,584 [P1352/D2/T8] INFO  umbraco.content - Loaded Xml from file.
+ 2017-06-28 09:18:33,828 [P1352/D2/T8] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2017-06-28 09:18:33,828 [P1352/D2/T8] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2017-06-28 09:18:33,829 [P1352/D2/T8] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IParameterEditor
+ 2017-06-28 09:18:33,829 [P1352/D2/T8] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IParameterEditor (took 0ms)
+ 2017-06-28 09:18:42,666 [P1352/D2/T7] WARN  Umbraco.Web.UmbracoModule - Status code is 404 yet TrySkipIisCustomErrors is false - IIS will take over.
+ 2017-06-28 09:19:33,688 [P1352/D2/T8] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2017-06-27 09:19:33

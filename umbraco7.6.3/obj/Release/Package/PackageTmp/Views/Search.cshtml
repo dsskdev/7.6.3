@@ -1,0 +1,61 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using Examine.LuceneEngine.SearchCriteria
+@{
+	Layout = "Master.cshtml";
+}
+
+@* the fun starts here *@
+
+@{
+ string searchTerm = Request.QueryString["keywords"];
+ if (String.IsNullOrWhiteSpace(searchTerm))
+ {
+  searchTerm = "";
+ }
+ var searcher = ExamineManager.Instance;
+ var searchCriteria = searcher.CreateSearchCriteria();
+ var query = searchCriteria.GroupedOr(new[] { "nodeName", "name", "pageTitle", "pageRTE", "pageLinks" }, searchTerm.MultipleCharacterWildcard()).Compile();
+ var searchResults = searcher.Search(query).Where(r => r["__IndexType"] == "content").ToList();    
+}
+@if (searchResults.Any())
+{
+ <ul class="list-group list-unstyled">
+  @foreach (var result in searchResults)
+  {
+   var node = Umbraco.TypedContent(result.Id);
+   var pathIds = result["__Path"].Split(',');
+   var path = Umbraco.TypedContent(pathIds).Where(p => p != null).Select(p=> new {p.Name}).ToList();
+   <li>
+    <section>
+     @if (result.Fields.ContainsKey("pageTitle"))
+     {
+      <h3 class="results-title">@result["pageTitle"]</h3>
+     }
+     @if (result.Fields.ContainsKey("pageContent"))
+     {
+      <p>@result["pageContent"].Truncate(250)</p>
+     }
+	 <a href="@node.Url" class="mark">@node.Url</a>
+     @* Uncomment this to see all the fields returned in the search*@
+    @* <p>
+     @foreach (var field in result.Fields)
+     {
+      <text>[<strong>@field.Key</strong>]@field.Value<br/></text>
+     }
+     </p> *@
+    </section>
+  </li>
+  <hr />
+  }
+ </ul>
+}
+else
+{
+ <p>
+  There are no results matching your search criteria:
+  @if (!String.IsNullOrWhiteSpace(searchTerm))
+  {
+   <text>'@searchTerm'</text>
+  }
+ </p>
+}

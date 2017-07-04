@@ -1,0 +1,35 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">
+            <i class="fa fa-calendar-o"></i> Events
+        </h1>
+    </div>
+    @{
+        var eventItems = Umbraco.TypedContentAtXPath("/root/home/branch/event");
+        foreach (var eventItem in eventItems.Take(5))
+        {
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>@eventItem.Name</h4>
+                    </div>
+                    @{
+                        var img = Umbraco.TypedMedia(eventItem.GetPropertyValue<int>("eventImage"));
+                        if (img != null)
+                        {
+                            <img class="img-responsive" src="@img.Url" />
+                        }
+                    }
+                    <div class="panel-body">
+                        <p>@(Umbraco.Truncate(eventItem.GetPropertyValue("eventLocation").ToString(), 200, true))</p>
+                    </div>
+                    <div class="panel-body">
+                        <p>@(Umbraco.Truncate(eventItem.GetPropertyValue("eventDescription").ToString(), 200, true))</p>
+                        <a href="@eventItem.Url" class="btn btn-default">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>

@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "d7c9a060e9199b43")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "f10abd90d09ef5f1")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -163,7 +163,7 @@ namespace Umbraco.Web.PublishedContentModels
 
 	/// <summary>Home</summary>
 	[PublishedContentModel("home")]
-	public partial class Home : PublishedContentModel
+	public partial class Home : PublishedContentModel, IDefaultContent
 	{
 #pragma warning disable 0109 // new is redundant
 		public new const string ModelTypeAlias = "home";
@@ -184,6 +184,42 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Home, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Page Image: Main image for page
+		///</summary>
+		[ImplementPropertyType("pageImage")]
+		public IPublishedContent PageImage
+		{
+			get { return Umbraco.Web.PublishedContentModels.DefaultContent.GetPageImage(this); }
+		}
+
+		///<summary>
+		/// Page Links: Add links to external and internal content on page
+		///</summary>
+		[ImplementPropertyType("pageLinks")]
+		public Umbraco.Web.Models.RelatedLinks PageLinks
+		{
+			get { return Umbraco.Web.PublishedContentModels.DefaultContent.GetPageLinks(this); }
+		}
+
+		///<summary>
+		/// Page RTE: Rich Text Editor for main content of page
+		///</summary>
+		[ImplementPropertyType("pageRTE")]
+		public IHtmlString PageRte
+		{
+			get { return Umbraco.Web.PublishedContentModels.DefaultContent.GetPageRte(this); }
+		}
+
+		///<summary>
+		/// Page Title: Title for page
+		///</summary>
+		[ImplementPropertyType("pageTitle")]
+		public string PageTitle
+		{
+			get { return Umbraco.Web.PublishedContentModels.DefaultContent.GetPageTitle(this); }
 		}
 	}
 
@@ -631,6 +667,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public IPublishedContent PartnerImage
 		{
 			get { return this.GetPropertyValue<IPublishedContent>("partnerImage"); }
+		}
+
+		///<summary>
+		/// Partner Logo
+		///</summary>
+		[ImplementPropertyType("partnerLogo")]
+		public IPublishedContent PartnerLogo
+		{
+			get { return this.GetPropertyValue<IPublishedContent>("partnerLogo"); }
 		}
 
 		///<summary>
