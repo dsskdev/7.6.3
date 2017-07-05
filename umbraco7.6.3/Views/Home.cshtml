@@ -2,6 +2,7 @@
 @{
     Layout = "Master.cshtml";
 }
+<!--Feature Section-->
 <div class="row">
             <div class="col-md-8">
                 @{
@@ -19,7 +20,6 @@
             </div>
         </div>
 <div class="row">
-
     <div class="col-lg-12">
         <hr />
         <div class="well text-center">
@@ -30,15 +30,17 @@
 <!-- News Section -->
 <div class="row">
     <div class="col-lg-12">
-        <h1 class="page-header">
-            <i class="fa fa-fw fa-newspaper-o"></i>News
-        </h1>
-    </div>
+        <a href="/news">
+            <h2 class="page-header">
+                <i class="fa fa-fw fa-newspaper-o"></i>News
+            </h2>
+        </a>
+</div>
     @{
-        var newsItems = Umbraco.TypedContentAtXPath("//news");
+        var newsItems = Umbraco.TypedContentAtXPath("/root/home/branch/news");
         foreach (var newsItem in newsItems.Take(3))
         {
-            <div class="col-md-4">
+            <div class="col-xs-6 col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4>@newsItem.Name</h4>
@@ -53,16 +55,102 @@
         }
 </div>
 <!-- Events Section -->
-@{Html.RenderPartial("Lists/List Events"); }
-<!-- Departments Section -->
-@{Html.RenderPartial("Lists/List Departments"); }
-<!-- Partner Section -->
-@{Html.RenderPartial("Lists/List Partners"); }
-<!-- Footer -->
-<footer>
-    <div class="row">
-        <div class="col-lg-12">
-            <p>Copyright &copy; Your Website @DateTime.Now.ToString("yyyy")</p>
-        </div>
+<div class="row">
+    <div class="col-lg-12">
+        <h2 class="page-header">
+            <a href="/events">
+                <i class="fa fa-calendar-o"></i> Events
+            </a>
+        </h2>
     </div>
-</footer>
+    @{
+        var eventItems = Umbraco.TypedContentAtXPath("/root/home/branch/event");
+        foreach (var eventItem in eventItems.Take(3))
+        {
+            <div class="col-xs-6 col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">                      
+                        <a href="@eventItem">
+                            <h4>@eventItem.Name</h4>
+                        </a>
+                    </div>
+                    @{
+                    var img = Umbraco.TypedMedia(eventItem.GetPropertyValue<int>("eventImage"));
+                    if (img != null)
+                    {
+                <img class="img-responsive" src="@img.Url" />
+                    }
+                    }
+                    <div class="panel-body">
+                        <p>@(Umbraco.Truncate(eventItem.GetPropertyValue("eventLocation").ToString(), 200, true))</p>
+                    </div>
+                    <div class="panel-body">
+                        <p>@(Umbraco.Truncate(eventItem.GetPropertyValue("eventDescription").ToString(), 200, true))</p>
+                        <a href="@eventItem.Url" class="btn btn-default">Learn More</a>
+                    </div>
+                </div>
+            </div>
+      }
+    }
+</div>
+<!-- Departments Section -->
+<div class="row">
+    <div class="col-lg-12">
+        <h2 class="page-header">
+            <a href="/departments">
+                <i class="fa fa-fw fa-users"></i>Departments
+            </a>
+        </h2>
+    </div>
+    @{
+        var departmentItems = Umbraco.TypedContentAtXPath("/root/home/branch/department");
+        foreach (var departmentItem in departmentItems.Take(3))
+        {
+            <div class="col-xs-12 col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>@departmentItem.Name</h4>
+                    </div>
+                    @{
+                        var img = Umbraco.TypedMedia(departmentItem.GetPropertyValue<int>("departmentImage"));
+                        if (img != null)
+                        {
+                            <img class="img-responsive" src="@img.Url" />
+                        }
+                    }
+                    <div class="panel-body">
+                        <p>@(Umbraco.Truncate(departmentItem.GetPropertyValue("departmentLocation").ToString(), 200, true))</p>
+                        <a href="@departmentItem.Url" class="btn btn-default">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>
+<!-- Partners Section -->
+<div class="row">
+    <div class="col-lg-12">
+        <h2 class="page-header">
+            <a href="/About/Partners">
+                <i class="fa fa-fw fa-handshake-o"></i> Partners
+            </a>
+        </h2>        
+    </div>
+    @{
+        var partnerItems = Umbraco.TypedContentAtXPath("/root/home/branch/branch/partner");
+        foreach (var partnerItem in partnerItems)
+        {
+            <div class="col-xs-6 col-sm-2 col-md-2">
+                <a href="@partnerItem.Url">
+                    @{
+                        var img = Umbraco.TypedMedia(partnerItem.GetPropertyValue<int>("partnerLogo"));
+                        if (img != null)
+                        {
+                            <img class="img-responsive img-thumbnail" src="@img.Url" alt="@partnerItem.Name" />
+                        }
+                    }
+                </a>
+            </div>
+         }
+    }
+</div>

@@ -3327,6 +3327,12 @@
     <Content Include="Views\Partials\Lists\List Partners.cshtml" />
     <Content Include="Views\Partials\Lists\List Events.cshtml" />
     <Content Include="Views\Partials\Lists\List Departments.cshtml" />
+    <Content Include="Views\BranchDepartments.cshtml" />
+    <Content Include="Views\BranchPartners.cshtml" />
+    <Content Include="Views\BranchNews.cshtml" />
+    <Content Include="Views\BranchPeople.cshtml" />
+    <Content Include="Views\Partials\Lists\List News.cshtml" />
+    <Content Include="Views\Partials\Lists\List People.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

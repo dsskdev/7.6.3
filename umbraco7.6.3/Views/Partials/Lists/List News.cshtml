@@ -1,0 +1,25 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+<div class="row">
+    <div class="col-lg-12">
+        <h2 class="page-header">
+            <i class="fa fa-fw fa-newspaper-o"></i>News
+        </h2>
+    </div>
+    @{
+        var newsItems = Umbraco.TypedContentAtXPath("/root/home/branch/news");
+        foreach (var newsItem in newsItems)
+        {
+            <div class="col-xs-6 col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4>@newsItem.Name</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>@(Umbraco.Truncate(newsItem.GetPropertyValue("newsRTE").ToString(), 200, true))</p>
+                        <a href="@newsItem.Url" class="btn btn-default">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+</div>
