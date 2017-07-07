@@ -6,27 +6,48 @@
         </h1>
     </div>
     @{
-        var partnerItems = Umbraco.TypedContentAtXPath("/root/home/branch/branch/partner");
-
+        var partnerItems = Umbraco.TypedContentAtXPath("/root/home/branch/partner");
         foreach (var partnerItem in partnerItems)
         {
-            <div class="col-xs-6 col-md-3">
-                <a href="@partnerItem.Url">
-
-                    <h4>@partnerItem.Name</h4>
-
+            <div class="row">
+                <div class="col-xs-6 col-md-6">
+                    <a href="@partnerItem.Url">
+                        <h4>@partnerItem.Name</h4>
+                        @{
+                            var img = Umbraco.TypedMedia(partnerItem.GetPropertyValue<int>("partnerLogo"));
+                            if (img != null)
+                            {
+                                <div class="row">
+                                    <div class="col-xs-6 col-md-3">
+                                        <img class="img-responsive" src="@img.Url" />
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </a>
+                </div>
+                <div class="col-xs-6 col-md-6">
                     @{
-                        var img = Umbraco.TypedMedia(partnerItem.GetPropertyValue<int>("partnerLogo"));
-                        if (img != null)
+                        foreach (var department in partnerItem.Children())
                         {
-                            <img class="img-responsive" src="@img.Url" />
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <a href="@department.Url">
+                                        <i class="fa fa-fw fa-users"></i>
+                                        @department.GetPropertyValue("departmentName")
+                                    </a>
+                                </div>
+                                <div class="col-md-6">
+                                   @department.GetPropertyValue("departmentLocation")
+                                   @department.GetPropertyValue("departmentContactName")
+                                   @department.GetPropertyValue("departmentContactPhone")
+                                </div>
+                            </div>                    
                         }
                     }
-                </a>
-
-             </div>      
-                
-            }
+                </div>
+            </div>               
         }
+    }
     <hr />
 </div>

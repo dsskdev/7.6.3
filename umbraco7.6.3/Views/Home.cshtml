@@ -21,7 +21,6 @@
         </div>
 <div class="row">
     <div class="col-lg-12">
-        <hr />
         <div class="well text-center">
             @Umbraco.Field("pageRTE")
         </div>
@@ -30,11 +29,11 @@
 <!-- News Section -->
 <div class="row">
     <div class="col-lg-12">
-        <a href="/news">
-            <h2 class="page-header">
+        <h2 class="page-header">
+            <a href="/news">
                 <i class="fa fa-fw fa-newspaper-o"></i>News
-            </h2>
-        </a>
+            </a>
+        </h2>
 </div>
     @{
         var newsItems = Umbraco.TypedContentAtXPath("/root/home/branch/news");
@@ -94,7 +93,7 @@
     }
 </div>
 <!-- Departments Section -->
-<div class="row">
+@*<div class="row">
     <div class="col-lg-12">
         <h2 class="page-header">
             <a href="/departments">
@@ -126,7 +125,7 @@
             </div>
         }
     }
-</div>
+</div>*@
 <!-- Partners Section -->
 <div class="row">
     <div class="col-lg-12">
@@ -137,7 +136,7 @@
         </h2>        
     </div>
     @{
-        var partnerItems = Umbraco.TypedContentAtXPath("/root/home/branch/branch/partner");
+        var partnerItems = Umbraco.TypedContentAtXPath("/root/home/branch/partner");
         foreach (var partnerItem in partnerItems)
         {
             <div class="col-xs-6 col-sm-2 col-md-2">

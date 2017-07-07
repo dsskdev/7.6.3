@@ -2,6 +2,39 @@
 @{
 	Layout = "Master.cshtml";
 }
-
-@* the fun starts here *@
-
+@{Html.RenderPartial("Breadcrumb");}
+<div class="row">
+    <div class="col-md-3">
+        @{Html.RenderPartial("Navigation Siblings");}
+    </div>
+    <div class="col-md-9">
+        <div class="row">
+            <div class="col-md-5">
+                    <h1>@Umbraco.Field("departmentName")</h1>
+                    <h4>Location</h4>
+                    @Umbraco.Field("departmentLocation")
+                    <h4>Contact</h4>
+                    @Umbraco.Field("departmentContactName")
+                    @Umbraco.Field("departmentContactPhone")
+            </div>
+            <div class="col-md-7">
+                @{
+                    var image = Model.Content.GetPropertyValue<IPublishedContent>("departmentImage");
+                    if (image != null)
+                    {
+                        <img class="img-responsive" src="@image.GetPropertyValue("umbracoFile")" />
+                    }
+                    else
+                    {
+                        <img class="img-responsive" src="~/media/1003/750x450.png" />
+                    }
+                }
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                @Umbraco.Field("departmentDescription")
+            </div>
+        </div>
+    </div>
+</div>

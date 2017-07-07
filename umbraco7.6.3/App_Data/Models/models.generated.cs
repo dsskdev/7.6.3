@@ -19,7 +19,7 @@ using Umbraco.ModelsBuilder;
 using Umbraco.ModelsBuilder.Umbraco;
 
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "f10abd90d09ef5f1")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "e82edafbec1627d5")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 namespace Umbraco.Web.PublishedContentModels
@@ -645,6 +645,15 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
+		/// Partner Description: Description of partner
+		///</summary>
+		[ImplementPropertyType("partnerDescription")]
+		public IHtmlString PartnerDescription
+		{
+			get { return this.GetPropertyValue<IHtmlString>("partnerDescription"); }
+		}
+
+		///<summary>
 		/// Partner Image: Image of partner
 		///</summary>
 		[ImplementPropertyType("partnerImage")]
@@ -654,7 +663,7 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
-		/// Partner Logo
+		/// Partner Logo: Logo of partner
 		///</summary>
 		[ImplementPropertyType("partnerLogo")]
 		public IPublishedContent PartnerLogo
@@ -669,6 +678,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public string PartnerName
 		{
 			get { return this.GetPropertyValue<string>("partnerName"); }
+		}
+
+		///<summary>
+		/// Partner Url: External link to partner website
+		///</summary>
+		[ImplementPropertyType("partnerUrl")]
+		public Umbraco.Web.Models.RelatedLinks PartnerUrl
+		{
+			get { return this.GetPropertyValue<Umbraco.Web.Models.RelatedLinks>("partnerUrl"); }
 		}
 
 		///<summary>
@@ -752,6 +770,33 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
+		/// Department Contact Name: Department contact
+		///</summary>
+		[ImplementPropertyType("departmentContactName")]
+		public string DepartmentContactName
+		{
+			get { return this.GetPropertyValue<string>("departmentContactName"); }
+		}
+
+		///<summary>
+		/// Department Contact Phone: Department phone number
+		///</summary>
+		[ImplementPropertyType("departmentContactPhone")]
+		public string DepartmentContactPhone
+		{
+			get { return this.GetPropertyValue<string>("departmentContactPhone"); }
+		}
+
+		///<summary>
+		/// Department Description: Description of the department
+		///</summary>
+		[ImplementPropertyType("departmentDescription")]
+		public IHtmlString DepartmentDescription
+		{
+			get { return this.GetPropertyValue<IHtmlString>("departmentDescription"); }
+		}
+
+		///<summary>
 		/// Department Image
 		///</summary>
 		[ImplementPropertyType("departmentImage")]
@@ -776,6 +821,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public string DepartmentName
 		{
 			get { return this.GetPropertyValue<string>("departmentName"); }
+		}
+
+		///<summary>
+		/// Department Partner: Partner of Department
+		///</summary>
+		[ImplementPropertyType("departmentPartner")]
+		public string DepartmentPartner
+		{
+			get { return this.GetPropertyValue<string>("departmentPartner"); }
 		}
 
 		///<summary>

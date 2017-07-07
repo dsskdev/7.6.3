@@ -3,4 +3,21 @@
     Layout = "Master.cshtml";
 }
 @{ Html.RenderPartial("Breadcrumb");}
+<div class="row">
+    <div class="col-md-12">
+        <h1>@Umbraco.Field("pageTitle")</h1>
+    </div>
+    <div class="col-md-12">
+        @{
+            var image = Model.Content.GetPropertyValue<IPublishedContent>("pageImage");
+            if (image != null)
+            {
+                <img class="img-responsive" src="@image.GetPropertyValue("umbracoFile")" />
+            }
+        }
+    </div>
+    <div class="col-md-12">
+        @Umbraco.Field("pageRTE")
+    </div>
+    </div>
 @{ Html.RenderPartial("Lists/List People");}

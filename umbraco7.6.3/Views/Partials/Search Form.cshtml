@@ -1,11 +1,10 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
-<form method="get" action="/search-results/" role="search">
+<form class="navbar-form"  method="get" action="/search-results/" role="search">
     <div class="input-group">
         <label class="hidden" for="search">search:</label>
         <input type="text" name="keywords" id="search" class="form-control" placeholder="Search..." required />
         <span class="input-group-btn">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-default"><i class="fa fa-fw fa-search"></i></button>
         </span>
     </div>
 </form>
-<hr />

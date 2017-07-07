@@ -27,9 +27,10 @@
    var path = Umbraco.TypedContent(pathIds).Where(p => p != null).Select(p=> new {p.Name}).ToList();
    <li>
     <section>
-     @if (result.Fields.ContainsKey("pageTitle"))
+     <a href="@node.Parent.Url">@node.Parent.Name</a>
+     @if (result.Fields.ContainsKey("nodeName"))
      {
-      <h3 class="results-title">@result["pageTitle"]</h3>
+        <p class="results-title">@result["nodeName"]</p>
      }
      @if (result.Fields.ContainsKey("pageContent"))
      {
@@ -37,12 +38,12 @@
      }
 	 <a href="@node.Url" class="mark">@node.Url</a>
      @* Uncomment this to see all the fields returned in the search*@
-    @* <p>
+     @*<p>
      @foreach (var field in result.Fields)
      {
       <text>[<strong>@field.Key</strong>]@field.Value<br/></text>
      }
-     </p> *@
+     </p>*@
     </section>
   </li>
   <hr />

@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">
-            <i class="fa fa-fw fa-id-card-o"></i>People
+            <i class="fa fa-fw fa-user"></i>People
         </h1>
     </div>
     @{
@@ -12,7 +12,7 @@
             <div class="col-md-4">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h4>@peopleItem.Name</h4>
+                        <h4>@peopleItem.GetPropertyValue("peopleRole")</h4>
                     </div>
                     @{
                         var img = Umbraco.TypedMedia(peopleItem.GetPropertyValue<int>("PeopleImage"));
@@ -22,8 +22,8 @@
                         }
                     }
                     <div class="panel-body">
+                        <h4>@peopleItem.Name</h4>
                         <p>@(Umbraco.Truncate(peopleItem.GetPropertyValue("peopleBio").ToString(), 200, true))</p>
-                        <p>@peopleItem.GetPropertyValue("peopleRole")</p>
                         <a href="@peopleItem.Url" class="btn btn-default">Learn More</a>
                     </div>
                 </div>
