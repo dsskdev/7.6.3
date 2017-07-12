@@ -3,7 +3,6 @@
 @{
     var siblings = Model.Content.Siblings();
   	<ul>
-        <hr />
 	@foreach (var item in siblings.Where(x => x.Id != Model.Content.Id))
 	{
 		<li>

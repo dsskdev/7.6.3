@@ -15,7 +15,7 @@ C:\Dibs\umbraco7.6.3\umbraco7.6.3\bin\umbraco7.6.3.dll
 C:\Dibs\umbraco7.6.3\umbraco7.6.3\bin\umbraco7.6.3.pdb
 C:\Dibs\umbraco7.6.3\umbraco7.6.3\bin\System.Collections.Immutable.dll
 C:\Dibs\umbraco7.6.3\umbraco7.6.3\bin\System.Reflection.Metadata.dll
-C:\Dibs\umbraco7.6.3\umbraco7.6.3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Dibs\umbraco7.6.3\umbraco7.6.3\obj\Release\umbraco7.6.3.csprojResolveAssemblyReference.cache
 C:\Dibs\umbraco7.6.3\umbraco7.6.3\obj\Release\umbraco7.6.3.dll
 C:\Dibs\umbraco7.6.3\umbraco7.6.3\obj\Release\umbraco7.6.3.pdb
+C:\Dibs\umbraco7.6.3\umbraco7.6.3\bin\Our.Umbraco.NestedContent.dll
+C:\Dibs\umbraco7.6.3\umbraco7.6.3\obj\Release\umbraco7.6.3.csprojResolveAssemblyReference.cache

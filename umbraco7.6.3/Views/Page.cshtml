@@ -1,6 +1,7 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using Umbraco.Web.Models
 @{
-	Layout = "Master.cshtml";
+    Layout = "Master.cshtml";
 }
 
 @* the fun starts here *@
@@ -14,14 +15,55 @@
     </div>
     <!-- Content Column -->
     <div class="col-md-9">
-        @{
-            var image = Model.Content.GetPropertyValue<IPublishedContent>("pageImage");
-            if (image != null)
-            {
-                <img class="img-responsive" src="@image.GetPropertyValue("umbracoFile")" />
+        <div class="row">
+            <div class="col-md-12">
+                @{
+                    var image = Model.Content.GetPropertyValue<IPublishedContent>("pageImage");
+                    if (image != null)
+                    {
+                        <img class="img-responsive" src="@image.GetPropertyValue("umbracoFile")" />
+                    }
+                }
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <h1>@Umbraco.Field("pageName")</h1>
+            </div>
+            <div class="col-xs-12">
+                @Umbraco.Field("pageRTE")
+            </div>
+        </div>
+        <div class="row">
+             @{ 
+                 var pageLinks = Model.Content.GetPropertyValue<RelatedLinks>("pageLinks");
+                 var pdf = Model.Content.GetPropertyValue<IPublishedContent>("pagePdfLinks");
+
+                 if ((pageLinks != null) || (pdf != null))
+                 {
+                     <div class="col-xs-12">
+                        <h2>Resources</h2>
+                     </div>
+                 }
+
+                 if (pageLinks != null)
+                 {
+                    <div class="col-xs-12 col-md-6">
+                        @foreach (var item in pageLinks)
+                        {
+                            var linkTarget = (item.NewWindow) ? "_blank" : null;
+                            <a href="@item.Link" target="@linkTarget">@item.Caption</a>
+                        }
+                    </div>
+                 }
+
+                 if (pdf != null)
+                 {
+                    <div class="col-xs-12 col-md-6">
+                        <a href="@pdf.GetPropertyValue("umbracoFile")" target="_blank">@pdf.Name</a>                            
+                    </div>
+                 }
             }
-        }
-        @Umbraco.Field("pageName")
-        @Umbraco.Field("pageRTE")
+        </div>
     </div>
 </div>

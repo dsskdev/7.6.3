@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "e82edafbec1627d5")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "d9346d4d3c0f8133")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -362,6 +362,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Page, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Page Pdf Links: Add links to PDF documents
+		///</summary>
+		[ImplementPropertyType("pagePdfLinks")]
+		public IPublishedContent PagePdfLinks
+		{
+			get { return this.GetPropertyValue<IPublishedContent>("pagePdfLinks"); }
 		}
 
 		///<summary>
@@ -1239,6 +1248,68 @@ namespace Umbraco.Web.PublishedContentModels
 		public string UmbracoUrlName
 		{
 			get { return Umbraco.Web.PublishedContentModels.UmbracoProperties.GetUmbracoUrlName(this); }
+		}
+	}
+
+	/// <summary>Contact</summary>
+	[PublishedContentModel("contact")]
+	public partial class Contact : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "contact";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Content;
+#pragma warning restore 0109
+
+		public Contact(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Contact, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Contact Department
+		///</summary>
+		[ImplementPropertyType("contactDepartment")]
+		public string ContactDepartment
+		{
+			get { return this.GetPropertyValue<string>("contactDepartment"); }
+		}
+
+		///<summary>
+		/// Contact List
+		///</summary>
+		[ImplementPropertyType("contactList")]
+		public IEnumerable<IPublishedContent> ContactList
+		{
+			get { return this.GetPropertyValue<IEnumerable<IPublishedContent>>("contactList"); }
+		}
+
+		///<summary>
+		/// Contact Name
+		///</summary>
+		[ImplementPropertyType("contactName")]
+		public string ContactName
+		{
+			get { return this.GetPropertyValue<string>("contactName"); }
+		}
+
+		///<summary>
+		/// Contact Phone Number
+		///</summary>
+		[ImplementPropertyType("contactPhoneNumber")]
+		public int ContactPhoneNumber
+		{
+			get { return this.GetPropertyValue<int>("contactPhoneNumber"); }
 		}
 	}
 
