@@ -17,6 +17,10 @@ footer {
     position: absolute;
     width: 100%;
 }
+.footer {
+    background-color: #2C3B42 !important;
+    height:61px;
+}
 
 nav {
     background-color: #2C3B42 !important;
@@ -24,6 +28,15 @@ nav {
 /* Boostrap Overide */
 .breadcrumb {
     background-color: transparent;
+}
+.carousel-caption {
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    opacity: 0.3;
+    padding:  0 0 0 0.8em;
+    right: 0;
+    text-align: left;
 }
 .navbar {
     margin-bottom: 5px;
@@ -34,7 +47,12 @@ nav {
     margin-left: 0;
     margin-right: 0;
 }
-
 .page-header {
     margin-top: auto;
+}
+.panel-heading {
+    background-color: #2C3B42 !important;
+}
+.well {
+    margin: 0.5em 0;
 }

@@ -8,7 +8,7 @@ using  Umbraco.Web;
 using  Umbraco.ModelsBuilder;
 using  Umbraco.ModelsBuilder.Umbraco;
 [assembly: PureLiveAssembly]
-[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "d9346d4d3c0f8133")]
+[assembly:ModelsBuilderAssembly(PureLive = true, SourceHash = "fa43fdbcc0f1663f")]
 [assembly:System.Reflection.AssemblyVersion("0.0.0.1")]
 
 
@@ -184,6 +184,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<Home, TValue>> selector)
 		{
 			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Feature Article Media Folder
+		///</summary>
+		[ImplementPropertyType("featureArticleMediaFolder")]
+		public IPublishedContent FeatureArticleMediaFolder
+		{
+			get { return this.GetPropertyValue<IPublishedContent>("featureArticleMediaFolder"); }
 		}
 
 		///<summary>
@@ -1170,6 +1179,15 @@ namespace Umbraco.Web.PublishedContentModels
 		}
 
 		///<summary>
+		/// Event End: End date and time of event
+		///</summary>
+		[ImplementPropertyType("eventEnd")]
+		public DateTime EventEnd
+		{
+			get { return this.GetPropertyValue<DateTime>("eventEnd"); }
+		}
+
+		///<summary>
 		/// Event Image: Image of event
 		///</summary>
 		[ImplementPropertyType("eventImage")]
@@ -1194,6 +1212,15 @@ namespace Umbraco.Web.PublishedContentModels
 		public string EventName
 		{
 			get { return this.GetPropertyValue<string>("eventName"); }
+		}
+
+		///<summary>
+		/// Event Start: Start date and time of event
+		///</summary>
+		[ImplementPropertyType("eventStart")]
+		public DateTime EventStart
+		{
+			get { return this.GetPropertyValue<DateTime>("eventStart"); }
 		}
 
 		///<summary>
@@ -1307,9 +1334,9 @@ namespace Umbraco.Web.PublishedContentModels
 		/// Contact Phone Number
 		///</summary>
 		[ImplementPropertyType("contactPhoneNumber")]
-		public int ContactPhoneNumber
+		public string ContactPhoneNumber
 		{
-			get { return this.GetPropertyValue<int>("contactPhoneNumber"); }
+			get { return this.GetPropertyValue<string>("contactPhoneNumber"); }
 		}
 	}
 
@@ -1469,6 +1496,68 @@ namespace Umbraco.Web.PublishedContentModels
 		public string UmbracoFile
 		{
 			get { return this.GetPropertyValue<string>("umbracoFile"); }
+		}
+	}
+
+	/// <summary>Feature Article</summary>
+	[PublishedContentModel("featureArticle")]
+	public partial class FeatureArticle : PublishedContentModel
+	{
+#pragma warning disable 0109 // new is redundant
+		public new const string ModelTypeAlias = "featureArticle";
+		public new const PublishedItemType ModelItemType = PublishedItemType.Media;
+#pragma warning restore 0109
+
+		public FeatureArticle(IPublishedContent content)
+			: base(content)
+		{ }
+
+#pragma warning disable 0109 // new is redundant
+		public new static PublishedContentType GetModelContentType()
+		{
+			return PublishedContentType.Get(ModelItemType, ModelTypeAlias);
+		}
+#pragma warning restore 0109
+
+		public static PublishedPropertyType GetModelPropertyType<TValue>(Expression<Func<FeatureArticle, TValue>> selector)
+		{
+			return PublishedContentModelUtility.GetModelPropertyType(GetModelContentType(), selector);
+		}
+
+		///<summary>
+		/// Feature Image: Image of feature atricle
+		///</summary>
+		[ImplementPropertyType("featureImage")]
+		public IPublishedContent FeatureImage
+		{
+			get { return this.GetPropertyValue<IPublishedContent>("featureImage"); }
+		}
+
+		///<summary>
+		/// Feature Link: Link to feature content page
+		///</summary>
+		[ImplementPropertyType("featureLink")]
+		public Umbraco.Web.Models.RelatedLinks FeatureLink
+		{
+			get { return this.GetPropertyValue<Umbraco.Web.Models.RelatedLinks>("featureLink"); }
+		}
+
+		///<summary>
+		/// Feature Summary: Brief summary about feature
+		///</summary>
+		[ImplementPropertyType("featureSummary")]
+		public string FeatureSummary
+		{
+			get { return this.GetPropertyValue<string>("featureSummary"); }
+		}
+
+		///<summary>
+		/// Feature Title: Title of feature article
+		///</summary>
+		[ImplementPropertyType("featureTitle")]
+		public string FeatureTitle
+		{
+			get { return this.GetPropertyValue<string>("featureTitle"); }
 		}
 	}
 

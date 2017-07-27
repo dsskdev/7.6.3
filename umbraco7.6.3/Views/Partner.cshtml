@@ -10,7 +10,9 @@
     </div>
     <div class="col-md-9">
         <div class="row">
-            <h2>@Umbraco.Field("partnerName")</h2>
+            <div class="col-md-12">
+                <h2>@Umbraco.Field("partnerName")</h2>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-3">
@@ -39,7 +41,42 @@
                     }
                 }
             </div>
+        </div>
+        <div class="row">
             <div class="col-md-12">
+                @Model.Content.GetPropertyValue("partnerDescription")
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Departments</h4>
+            </div>
+            @{
+                foreach (var department in Model.Content.Children())
+                {
+                    <div class="col-md-4">
+                        <a href="@department.Url">
+                            <i class="fa fa-fw fa-users"></i>
+                            @department.GetPropertyValue("departmentName")
+                        </a>
+                        @*@{var departmentImage = Umbraco.TypedMedia(department.GetPropertyValue<int>("departmentImage"));
+                            if (departmentImage != null)
+                            {
+                                <img class="img-responsive" src="@departmentImage.Url" />
+                            }
+                        }*@
+                    </div>
+                        <div class="col-md-6">
+                            @department.GetPropertyValue("departmentLocation")
+                            @department.GetPropertyValue("departmentContactName")
+                            @department.GetPropertyValue("departmentContactPhone")
+                        </div>
+                }
+            }
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h4>External Links</h4>
                 @{
                     var partnerLinks = Model.Content.GetPropertyValue<RelatedLinks>("partnerUrl");
                     if (partnerLinks != null)
@@ -47,37 +84,11 @@
                         foreach (var item in partnerLinks)
                         {
                             var linkTarget = (item.NewWindow) ? "_blank" : null;
-                            <a href="@item.Link" target="@linkTarget">@item.Caption</a>
+                            <a href="@item.Link" target="@linkTarget"><i class="fa fa-fw fa-handshake-o"></i> @item.Caption</a>
                         }
                     }
                 }
             </div>
-        </div>
-        <div class="row">
-            @{
-                foreach (var department in Model.Content.Children())
-                {
-                    <div class="row">
-                        <div class="col-md-4">
-                            <a href="@department.Url">
-                            <i class="fa fa-fw fa-users"></i>
-                            @department.GetPropertyValue("departmentName")
-                            </a>
-                            @*@{var departmentImage = Umbraco.TypedMedia(department.GetPropertyValue<int>("departmentImage"));
-                            if (departmentImage != null)
-                            {
-                                <img class="img-responsive" src="@departmentImage.Url" />
-                            }
-                        }*@
-                        </div>
-                        <div class="col-md-6">
-                            @department.GetPropertyValue("departmentLocation")
-                            @department.GetPropertyValue("departmentContactName")
-                            @department.GetPropertyValue("departmentContactPhone")
-                        </div>
-                    </div>
-                }
-            }
-        </div>
+        </div>        
     </div>
 </div>
