@@ -12,6 +12,12 @@
             <div class="col-md-5">
                 <h2>@Umbraco.Field("eventName")</h2>
                 <h3>@Umbraco.Field("eventLocation")</h3>
+                <h3>Start Date : @String.Format("{0:D}", (@DateTime.Parse(Umbraco.Field("eventStart").ToString())))</h3>
+                <h3>End Date : @String.Format("{0:D}", (@DateTime.Parse(Umbraco.Field("eventEnd").ToString())))</h3>
+                <h4>Start Time : @String.Format("{0:t}", (@DateTime.Parse(Umbraco.Field("eventStart").ToString())))</h4>
+                <h4>End time : @String.Format("{0:t}", (@DateTime.Parse(Umbraco.Field("eventEnd").ToString())))</h4>
+                @*@DateTime.Parse(Umbraco.Field("eventDate").ToString()).ToString("dd/MM/yyyy")
+                @(Model.Content.GetPropertyValue<DateTime>("eventDate").ToString("dd/MM/yyyy"))*@
             </div>
             <div class="col-md-7">
                 @{

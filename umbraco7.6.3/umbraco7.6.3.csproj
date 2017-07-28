@@ -378,20 +378,14 @@
     <Content Include="bin\amd64\sqlcese40.dll" />
     <Content Include="bin\AutoMapper.dll" />
     <Content Include="bin\AutoMapper.Net4.dll" />
-    <Content Include="bin\AutoMapper.Net4.pdb" />
-    <Content Include="bin\AutoMapper.pdb" />
     <Content Include="bin\businesslogic.dll" />
     <Content Include="bin\ClientDependency.Core.dll" />
     <Content Include="bin\ClientDependency.Core.Mvc.dll" />
-    <Content Include="bin\ClientDependency.Core.Mvc.pdb" />
-    <Content Include="bin\ClientDependency.Core.pdb" />
     <Content Include="bin\cms.dll" />
     <Content Include="bin\controls.dll" />
     <Content Include="bin\CookComputing.XmlRpcV2.dll" />
     <Content Include="bin\Examine.dll" />
-    <Content Include="bin\Examine.pdb" />
     <Content Include="bin\HtmlAgilityPack.dll" />
-    <Content Include="bin\HtmlAgilityPack.pdb" />
     <Content Include="bin\ICSharpCode.SharpZipLib.dll" />
     <Content Include="bin\ImageProcessor.dll" />
     <Content Include="bin\ImageProcessor.Web.dll" />
@@ -416,9 +410,7 @@
     <Content Include="bin\Microsoft.CodeAnalysis.CSharp.dll" />
     <Content Include="bin\Microsoft.CodeAnalysis.dll" />
     <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll" />
-    <Content Include="bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml" />
     <Content Include="bin\Microsoft.IO.RecyclableMemoryStream.dll" />
-    <Content Include="bin\Microsoft.IO.RecyclableMemoryStream.pdb" />
     <Content Include="bin\Microsoft.Owin.dll" />
     <Content Include="bin\Microsoft.Owin.Host.SystemWeb.dll" />
     <Content Include="bin\Microsoft.Owin.Security.Cookies.dll" />
@@ -426,7 +418,6 @@
     <Content Include="bin\Microsoft.Owin.Security.OAuth.dll" />
     <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
     <Content Include="bin\MiniProfiler.dll" />
-    <Content Include="bin\MiniProfiler.pdb" />
     <Content Include="bin\MySql.Data.dll" />
     <Content Include="bin\Newtonsoft.Json.dll" />
     <Content Include="bin\Owin.dll" />
@@ -462,7 +453,6 @@
     <Content Include="bin\umbraco.editorControls.dll" />
     <Content Include="bin\umbraco.MacroEngines.dll" />
     <Content Include="bin\Umbraco.ModelsBuilder.dll" />
-    <Content Include="bin\Umbraco.ModelsBuilder.pdb" />
     <Content Include="bin\umbraco.providers.dll" />
     <Content Include="bin\Umbraco.Web.UI.dll" />
     <Content Include="bin\umbraco7.6.3.dll" />
@@ -482,6 +472,7 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="css\datatables.min.css" />
     <Content Include="css\rte.css" />
+    <Content Include="Media\1013\ginni-rometty.jpg" />
     <Content Include="scripts\datatables.min.js" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\bootstrap.min.css" />
@@ -540,6 +531,7 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="App_Plugins\NestedContent\package.manifest" />
+    <Content Include="Media\1012\leblender_10x.pdf" />
     <None Include="Properties\PublishProfiles\sccPublish.pubxml" />
     <None Include="Properties\PublishProfiles\sccWebDeployPackage.pubxml" />
     <None Include="scripts\jquery-1.9.1.intellisense.js" />

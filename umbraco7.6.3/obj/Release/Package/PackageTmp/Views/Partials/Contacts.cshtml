@@ -1,0 +1,35 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+<div class="row">
+    <div class="col-md-12">
+        @{
+            var contacts = Model.Content.GetPropertyValue<IEnumerable<IPublishedContent>>("contactList");
+            if (contacts != null)
+            {
+            <table id="table_contact" class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>Contact Name</th>
+                        <th>Contact Number</th>
+                        <th>Contact Department</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var name in contacts)
+                    {
+                        <tr>
+                       
+                            <td>@name.GetPropertyValue("contactName")</td>
+                            <td>@name.GetPropertyValue("contactPhoneNumber")</td>
+                            <td>@name.GetPropertyValue("contactDepartment")</td>
+                        
+                        </tr>
+                    }
+                </tbody>
+            </table>
+            }
+            else {
+                <h2>No contact information found</h2>
+            }
+        }
+    </div>
+</div>

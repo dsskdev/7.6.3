@@ -34,7 +34,7 @@
      }
      @if (result.Fields.ContainsKey("pageContent"))
      {
-      <p>@result["pageContent"].Truncate(250)</p>
+      <p>@result["pageRTE"].Truncate(250)</p>
      }
 	 <a href="@node.Url" class="mark">@node.Url</a>
      @* Uncomment this to see all the fields returned in the search*@

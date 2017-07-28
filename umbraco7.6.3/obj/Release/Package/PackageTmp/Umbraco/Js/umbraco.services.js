@@ -3605,7 +3605,10 @@ function keyboardService($window, $timeout) {
     //
 
     return keyboardManagerService;
-}angular.module('umbraco.services').factory('keyboardService', ['$window', '$timeout', keyboardService]);
+}
+
+angular.module('umbraco.services').factory('keyboardService', ['$window', '$timeout', keyboardService]);
+
 /**
  @ngdoc service
  * @name umbraco.services.listViewHelper
@@ -7331,7 +7334,8 @@ function tinyMceService(dialogService, $log, imageHelper, $http, $timeout, macro
                         var newSize = imageHelper.scaleToMaxSize(editor.settings.maxImageSize, size.w, size.h);
 
                         var s = "width: " + newSize.width + "px; height:" + newSize.height + "px;";
-                        editor.dom.setAttrib(imgElm, 'style', s);
+                        var imgRTE = "display:block; max-width:100%; height:auto;";
+                        editor.dom.setAttrib(imgElm, 'style', imgRTE);
                         editor.dom.setAttrib(imgElm, 'id', null);
 
                         if (img.url) {

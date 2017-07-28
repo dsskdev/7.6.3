@@ -1,7 +1,15 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
-	Layout = "Master.cshtml";
+    Layout = "Master.cshtml";
 }
-
-@* the fun starts here *@
-
+@{Html.RenderPartial("breadcrumb");}
+<div class="row">
+    <div class="col-md-3">
+        @{Html.RenderPartial("Navigation Siblings");}
+    </div>
+    <div class="col-md-9">
+        <h1>@Model.Content.GetPropertyValue("newsTitle")</h1>
+        Created : @Model.Content.CreateDate - Update : @Model.Content.UpdateDate
+        @Model.Content.GetPropertyValue("newsRTE")
+    </div>
+</div>

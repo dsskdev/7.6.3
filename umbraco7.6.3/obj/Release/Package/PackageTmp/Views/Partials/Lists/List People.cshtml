@@ -1,0 +1,28 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+<div class="row">
+    @{
+        var peopleItems = Umbraco.TypedContentAtXPath("/root/home/branch/branch/people");
+        foreach (var peopleItem in peopleItems)
+        {
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a href="@peopleItem.Url">@peopleItem.GetPropertyValue("peopleRole")</a>
+                    </div>
+                    @{
+                        var img = Umbraco.TypedMedia(peopleItem.GetPropertyValue<int>("PeopleImage"));
+                        if (img != null)
+                        {
+                            <img class="img-responsive" src="@img.Url" />
+                        }
+                    }
+                    <div class="panel-body">
+                        <h4>@peopleItem.Name</h4>
+                        <p>@(Umbraco.Truncate(peopleItem.GetPropertyValue("peopleBio").ToString(), 200, true))</p>
+                        <a href="@peopleItem.Url" class="btn btn-default">Learn More</a>
+                    </div>
+                </div>
+            </div>
+                        }
+    }
+</div>

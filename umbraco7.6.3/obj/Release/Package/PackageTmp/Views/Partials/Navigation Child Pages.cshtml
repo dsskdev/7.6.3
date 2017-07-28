@@ -3,12 +3,14 @@
 
 @if (selection.Any())
 {
-    <ul>
-        @foreach (var item in selection)
-        {
-            <li>
-                <a href="@item.Url">@item.Name</a>
-            </li>
-        }
-    </ul>
+    <nav class="navbar navbar-default">
+        <ul class="nav">
+            @foreach (var item in selection)
+            {
+                <li>
+                    <a href="@item.Url">@item.Name</a>
+                </li>
+            }
+        </ul>
+    </nav>
 }

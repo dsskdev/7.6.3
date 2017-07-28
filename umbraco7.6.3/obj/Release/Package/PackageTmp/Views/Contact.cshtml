@@ -1,0 +1,9 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+	Layout = "Master.cshtml";
+}
+
+@* the fun starts here *@
+
+<h1>@Umbraco.Field("pageName")</h1>
+@{Html.RenderPartial("Contacts");}

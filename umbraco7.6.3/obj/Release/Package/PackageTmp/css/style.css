@@ -1,85 +1,58 @@
-html,
+/*html,
 body {
     height: 100%;
+    color: #2c3b42;
+}*/
+
+html {
+    min-height:100%;
+    position: relative;
 }
-
-body {
-    /* padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+body{
+    margin: 0 0 61px;
 }
-
-.img-portfolio {
-    margin-bottom: 30px;
-}
-
-.img-hover:hover {
-    opacity: 0.8;
-}
-
-/* Home Page Carousel */
-
-header.carousel {
-    height: 50%;
-}
-
-header.carousel .item,
-header.carousel .item.active,
-header.carousel .carousel-inner {
-    height: 100%;
-}
-
-header.carousel .fill {
-    width: 100%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-}
-
-/* 404 Page Styles */
-
-.error-404 {
-    font-size: 100px;
-}
-
-/* Pricing Page Styles */
-
-.price {
-    display: block;
-    font-size: 50px;
-    line-height: 50px;
-}
-
-.price sup {
-    top: -20px;
-    left: 2px;
-    font-size: 20px;
-}
-
-.period {
-    display: block;
-    font-style: italic;
-}
-
-/* Footer Styles */
-
 footer {
-    margin: 50px 0;
+    bottom: 0;
+    height: 61px;
+    position: absolute;
+    width: 100%;
+}
+.footer {
+    background-color: #2C3B42 !important;
+    height:61px;
 }
 
-/* Responsive Styles */
-
-@media(max-width:991px) {
-    .customer-img,
-    .img-related {
-        margin-bottom: 30px;
-    }
+nav {
+    background-color: #2C3B42 !important;
 }
-
-@media(max-width:767px) {
-    .img-portfolio {
-        margin-bottom: 15px;
-    }
-
-    header.carousel .carousel {
-        height: 70%;
-    }
+/* Boostrap Overide */
+.breadcrumb {
+    background-color: transparent;
+}
+.carousel-caption {
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    opacity: 0.3;
+    padding:  0 0 0 0.8em;
+    right: 0;
+    text-align: left;
+}
+.navbar {
+    margin-bottom: 5px;
+}
+.navbar-default .navbar-form {
+    border-color: transparent;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+.page-header {
+    margin-top: auto;
+}
+.panel-heading {
+    background-color: #2C3B42 !important;
+}
+.well {
+    margin: 0.5em 0;
 }
